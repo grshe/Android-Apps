@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/recText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today's Recommended Restaurant"
+        android:textSize="35dp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/restName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[restaurant name]"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/recText"/>
+
+    <TextView
+        android:id="@+id/restHours"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[restaurant hours]"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/restName"/>
+
+    <TextView
+        android:id="@+id/visitedText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Visited the restaurant?"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/restHours"/>
+
+    <TextView
+        android:id="@+id/ratingLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Give it a rating:"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:layout_below="@+id/visitedText"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/ratingLabel" />
+
+    <Button
+        android:id="@+id/mapButton"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:text="View on Map"
+        android:textSize="25dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="45dp"
+        android:layout_below="@id/ratingBar"
+        android:onClick="map" />
+
+    <Button
+        android:id="@+id/calendarButton"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:text="Past Ratings"
+        android:textSize="25dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/mapButton"
+        android:layout_below="@id/ratingBar"
+        android:onClick="calendar" />
+
+</RelativeLayout>
